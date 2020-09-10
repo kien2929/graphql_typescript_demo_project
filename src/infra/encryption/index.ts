@@ -1,5 +1,5 @@
 import * as bcrypt from "bcryptjs";
-import accessEnv from "./accessEnv";
+import accessEnv from "../accessEnv";
 
 const HASH_LENGTH:number = + accessEnv("HASH_LENGTH")
 

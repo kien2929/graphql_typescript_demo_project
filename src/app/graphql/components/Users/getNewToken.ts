@@ -1,5 +1,5 @@
-import { jwtUtil } from "#root/helpers/jwtUtil";
-import accessEnv from "#root/helpers/accessEnv";
+import { jwtUtil } from "#root/infra/jwt";
+import accessEnv from "#root/infra/accessEnv";
 import { ApolloError } from "apollo-server";
 
 const accessSecret = accessEnv("ACCESS_SECRET");

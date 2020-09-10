@@ -1,5 +1,5 @@
-import { User } from "#root/db/models";
-import {hashUtil} from "#root/helpers/hashUtil";
+import { User } from "#root/infra/database/models";
+import {hashUtil} from "#root/infra/encryption";
 
 const signUpResolver = (context: any, { username, password }: { username: string; password: string }) => {
   let hashedPassword = hashUtil.hashPassword(password);

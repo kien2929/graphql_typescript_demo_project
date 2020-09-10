@@ -1,4 +1,4 @@
 import "dotenv/config";
 
-import "#root/db/connection";
-import "#root/server/startServer";
+import "#root/infra/database/connection";
+import "#root/interfaces/http/server";

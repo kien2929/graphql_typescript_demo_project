@@ -3,12 +3,12 @@ import * as express from "express";
 import * as bodyParser from "body-parser";
 import { ApolloServer, makeExecutableSchema } from "apollo-server-express";
 import { applyMiddleware } from 'graphql-middleware';
-import permissions from "#root/graphql/authentication"
-import resolvers from "#root/graphql/resolvers";
-import typeDefs from "#root/graphql/typeDefs";
-import accessEnv from "#root/helpers/accessEnv";
+import permissions from "#root/infra/authentication"
+import resolvers from "#root/domain/graphql/resolvers";
+import typeDefs from "#root/domain/graphql/typeDefs";
+import accessEnv from "#root/infra/accessEnv";
 // import {logger} from '#root/helpers/logger';
-const userRouter = require("#root/routes");
+
 
 const PORT = accessEnv("PORT", 4000);
 
@@ -45,7 +45,6 @@ app.use(
 );
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(userRouter);
 apolloServer.applyMiddleware({ app, path: "/graphql" });
 
 app.listen(PORT, "0.0.0.0", () => {

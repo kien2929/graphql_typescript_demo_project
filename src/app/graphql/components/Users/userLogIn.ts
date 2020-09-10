@@ -1,7 +1,7 @@
-import { User } from "#root/db/models";
-import { hashUtil } from "#root/helpers/hashUtil";
-import { jwtUtil } from "#root/helpers/jwtUtil"
-import accessEnv from "#root/helpers/accessEnv"
+import { User } from "#root/infra/database/models";
+import { hashUtil } from "#root/infra/encryption";
+import { jwtUtil } from "#root/infra/jwt"
+import accessEnv from "#root/infra/accessEnv"
 import { AuthenticationError, ApolloError } from "apollo-server"
 
 const accessSecret = accessEnv("ACCESS_SECRET");

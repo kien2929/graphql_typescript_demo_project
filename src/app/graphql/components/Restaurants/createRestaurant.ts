@@ -1,4 +1,4 @@
-import { Restaurant } from "#root/db/models";
+import { Restaurant } from "#root/infra/database/models";
 
 const createRestaurantResolver = (
   context: any,

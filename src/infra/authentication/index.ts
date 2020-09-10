@@ -1,6 +1,6 @@
 import { rule, shield, chain, or, not } from 'graphql-shield';
-import { jwtUtil } from '#root/helpers/jwtUtil';
-import accessEnv from "#root/helpers/accessEnv"
+import { jwtUtil } from '#root/infra/jwt';
+import accessEnv from "#root/infra/accessEnv"
 interface payloadJwt {
   data:any
 }
